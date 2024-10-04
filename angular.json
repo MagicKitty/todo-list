@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "untitled1": {
+    "todo-list": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/untitled1",
+            "outputPath": "dist/todo-list",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "untitled1:build:production"
+              "buildTarget": "todo-list:build:production"
             },
             "development": {
-              "buildTarget": "untitled1:build:development"
+              "buildTarget": "todo-list:build:development"
             }
           },
           "defaultConfiguration": "development"
