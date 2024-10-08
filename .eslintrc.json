@@ -1,0 +1,86 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "dist",
+    "results",
+    "coverage",
+    "*.d.ts"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:tailwindcss/recommended",
+        "prettier"
+      ],
+      "plugins": [
+        "deprecation"
+      ],
+      "rules": {
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "bk",
+            "style": "kebab-case"
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "bk",
+            "style": "camelCase"
+          }
+        ],
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "deprecation/deprecation": "error",
+        "prettier/prettier": [
+          "error"
+        ],
+        "tailwindcss/classnames-order": "warn"
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended",
+        "plugin:tailwindcss/recommended",
+        "prettier"
+      ],
+      "rules": {
+        "@angular-eslint/template/no-positive-tabindex": "error",
+        "@angular-eslint/template/no-autofocus": "error",
+        "@angular-eslint/template/no-distracting-elements": "error",
+        "@angular-eslint/template/alt-text": "error",
+        "@angular-eslint/template/elements-content": "error",
+        "@angular-eslint/template/table-scope": "error",
+        "@angular-eslint/template/valid-aria": "error",
+        "prettier/prettier": [
+          "error"
+        ],
+        "tailwindcss/classnames-order": "warn"
+      }
+    }
+  ]
+}
