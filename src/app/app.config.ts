@@ -2,8 +2,8 @@ import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
-import { LoggingService } from './todo/logging.service';
-import { LoggingAPIService } from './todo/logging-api.service';
+import { LoggingService } from './todo/data-access/logging.service';
+import { LoggingAPIService } from './todo/data-access/logging-api.service';
 
 export const appConfig: ApplicationConfig = {
   providers: [

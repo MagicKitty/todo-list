@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { LoggingService } from './logging.service';
+import { LoggingService } from './data-access/logging.service';
 
 @Component({
   selector: 'app-todo-list',
