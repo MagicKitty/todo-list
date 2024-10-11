@@ -1,22 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { LoggerDirective } from '../directives/logger.directive';
-import { FromNowPipe } from '../pipes/from-now.pipe';
+import { LoggingService } from './logging.service';
 
 @Component({
   selector: 'app-todo-list',
   standalone: true,
   imports: [
-    RouterLink,
-    LoggerDirective,
-    FromNowPipe
+    RouterLink
   ],
   template: `
     <a routerLink="/home">go to home</a>
-    {{ date | fromNow }}
   `,
   styles: ``
 })
 export default class TodoListComponent {
-  date = '2025-02-11T11:30:30';
+  loggingService = inject(LoggingService);
+
+  constructor() {
+    this.loggingService.log('hi');
+  }
 }
