@@ -11,8 +11,6 @@ import { LoggerDirective } from '../shared/logger.directive';
   ],
   template: `
     <a routerLink="/home">go to home</a>
-    <div class="loggable" logText>Hello</div>
-    <div class="loggable" logText notLoggable="true">Hello</div>
   `,
   styles: ``
 })
